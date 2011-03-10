@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.md.updator" android:versionName="1.0" android:versionCode="1">
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:icon="@drawable/icon" android:label="01 Hiapk ROM 更新">
+		<activity android:name=".MDUpdator" android:theme="@style/Theme"
+			android:launchMode="singleInstance" android:label="01 Hiapk ROM 更新"
+			android:finishOnTaskLaunch="true" android:multiprocess="true"
+			android:process=":three" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.z4mod.z4root2.z4root"
+			android:theme="@style/Theme" android:launchMode="singleInstance"
+			android:finishOnTaskLaunch="true" android:multiprocess="true"
+			android:process=":three" android:screenOrientation="portrait">
+		</activity>
+		<activity android:name="com.z4mod.z4root2.Phase1"
+			android:theme="@style/Theme" android:launchMode="singleInstance"
+			android:label="Phase1" android:finishOnTaskLaunch="true"
+			android:multiprocess="true" android:process=":three"
+			android:screenOrientation="portrait">
+		</activity>
+		<activity android:name="com.z4mod.z4root2.Phase2"
+			android:theme="@style/Theme" android:launchMode="singleInstance"
+			android:label="Phase2" android:finishOnTaskLaunch="true"
+			android:multiprocess="true" android:process=":two"
+			android:screenOrientation="portrait">
+		</activity>
+
+
+		<receiver android:process=":remote" android:name="com.z4mod.z4root2.AlarmReceiver"></receiver>
+
+	</application>
+	<uses-sdk android:minSdkVersion="4" />
+</manifest>

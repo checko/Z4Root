@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:gravity="center"
+	android:background="@drawable/bg">
+
+	<Button android:id="@+id/updateButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="点  击  更  新" />
+
+	<TextView android:id="@+id/infoLabel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="点击按钮进行更新"
+		android:padding="5dp" />
+
+</LinearLayout>
